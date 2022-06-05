@@ -49,7 +49,7 @@ class GameController extends Controller
     {
         // Update the score of the game
         Game::where('id', $session_id)
-            ->update(['finished' => true]);
+            ->update(['finished' => true, 'finished_at' => now()]);
     }
 
     // Leaderboard
